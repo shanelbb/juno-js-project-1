@@ -393,42 +393,25 @@ $(function() {
         ],
         correctAnswer: 3
       }
-    ]
+    ],
+    score: 0
   };
 
   // Cached Selectors
-  const $quiz = $("#quiz");
   const $welcome = $("#welcome");
   const $start = $("#start");
-  const $question = $("#question");
-  const $answer = $("#answer");
-  const $form = $("form");
-  const $submit = $("#submit");
-  const $back = $("#back");
-  const $next = $("#next");
-  const $results = $("#results");
+  const $game = $("#game");
+  const $content = $(".content");
+  const $scoreBoard = $(".score-board");
 
   // let shuffledQuestions;
 
-  $question.addClass("hide");
-  $answer.addClass("hide");
-  $submit.addClass("hide");
-  $results.addClass("hide");
-  $(".score-board").addClass("hide");
+  $game.addClass("hide");
+  $scoreBoard.addClass("hide");
 
   $start.on("click", () => {
-    // quiz.forEach(function(index) {
-    //   shuffledQuestions = quiz.sort(() => Math.random() - 0.5);
-    // createForm();
-
-    $question.removeClass("hide");
-    $answer.removeClass("hide");
-    $next.removeClass("hide");
-    $submit.removeClass("hide");
-
+    $game.removeClass("hide");
     $welcome.addClass("hide");
-    $back.addClass("hide");
-    // });
   });
 
   let correctArray = quizData.quiz.map(function(question) {
@@ -446,12 +429,12 @@ $(function() {
       const fieldSetID = $(this)
         .prev()
         .attr("id");
-      const correctAnswer = quizData.quiz[fieldSetID].correct;
+      const correctAnswer = quizData.quiz[fieldSetID].correctAnswer;
       if (userChoiceNumber === correctAnswer) {
         quizData.score++;
         showScore();
       } else {
-        quizData.score--;
+        quizData.score;
         showScore();
       }
       $(this).hide();
@@ -470,37 +453,46 @@ $(function() {
   };
   const showScore = function(score) {
     console.log(quizData.score);
-    $(".score-board").html(`<h4>Score: ${quizData.score * 10} </h4>`);
+    $scoreBoard.html(`<h4 class="scoreTotal">${quizData.score * 10} </h4>`);
   };
   const showQuestion = function(i) {
     const htmlToAppend = `
       <fieldset id=${i}>
         <legend><h4>${quizData.quiz[i].question}</h4></legend>
-        <label for="answer1">${quizData.quiz[i].answers[0].value}</label>
-        <input value="0" checked type="radio" name=${quizData.quiz[i].name} id="answer1"/>
-        <label for="answer2">${quizData.quiz[i].answers[1].value}</label>
-        <input  value="1" type="radio" name=${quizData.quiz[i].name} id="answer1"/>
-        <label for="answer3">${quizData.quiz[i].answers[2].value}</label>
-        <input  value="2" type="radio" name=${quizData.quiz[i].name} id="answer1"/>
-        <label for="answer4">${quizData.quiz[i].answers[3].value}</label>
-        <input  value="3" type="radio" name=${quizData.quiz[i].name} id="answer1"/>
+        <input value="0" type="radio" name=${quizData.quiz[i].name} id="answer1"/>
+        <label value="0" for="answer1">${quizData.quiz[i].answers[0].value}</label>
+        <input  value="1" type="radio" name=${quizData.quiz[i].name} id="answer2"/>
+        <label value="1" for="answer2">${quizData.quiz[i].answers[1].value}</label>
+        <input  value="2" type="radio" name=${quizData.quiz[i].name} id="answer3"/>
+        <label value="2" for="answer3">${quizData.quiz[i].answers[2].value}</label>
+        <input  value="3" type="radio" name=${quizData.quiz[i].name} id="answer4"/>
+        <label value="3" for="answer4">${quizData.quiz[i].answers[3].value}</label>
       </fieldset>
       <button id="next">next</button>
     `;
-    $(".content").append(htmlToAppend);
+    $content.append(htmlToAppend);
   };
   const showFinalScreen = () => {
     const htmlToAppend = `
-  <h4>This is the final screen</h4>
+    <div class="finalScreen">
+    <h4 class="finite">Finite Incantatem!</h4>
+    <img
+        class="finalImg"
+        src="./assets/deathly-hallows.png"
+        alt="Deathly Hallows illustration"
+    />
+    <h4 class="scoreTotal">Your final score is:</h4>
+  </div>
   `;
 
-    $(".score-board").removeClass("hide");
-    $(".content").html(htmlToAppend);
+    $scoreBoard.removeClass("hide");
+    $content.html(htmlToAppend);
   };
   const init = function() {
     showQuestion(0);
     formSubmit();
     showScore();
+    labelClick();
   };
 
   init();
