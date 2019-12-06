@@ -1,298 +1,99 @@
-// const quiz2 = [
-//   {
-//     name: "Question 1",
-//     question:
-//       "What charm did Professor McGonagall use to bring the statues and suits of armour to life in Deathy Hallows",
-//     answers: [
-//       {
-//         value: "Petrificus Totalis"
-//       },
-//       {
-//         value: "Piertotum Locomotor"
-//       },
-//       {
-//         value: "Priori Incantato"
-//       },
-//       {
-//         value: "Homenum Revelio"
-//       }
-//     ],
-//     correctAnswer: 1
-//   },
-//   {
-//     name: "Question 2",
-//     question: "What does the spell Tarantallegra do?",
-//     answers: [
-//       {
-//         value: "Shoots spiders from the end of the wand"
-//       },
-//       {
-//         value: "Causes the victim to be covered in pasta"
-//       },
-//       {
-//         value: "Makes the victim's legs dance uncontrollably"
-//       },
-//       {
-//         value: "Makes the victim break into song"
-//       }
-//     ],
-//     correctAnswer: 2
-//   },
-//   {
-//     name: "Question 3",
-//     question: "Who tried to use the 'spell' Peskipiksi Pesternomi?",
-//     answers: [
-//       {
-//         value: "Gilderoy Lockhart"
-//       },
-//       {
-//         value: "Bellatrix Lestrange"
-//       },
-//       {
-//         value: "Severus Snape"
-//       },
-//       {
-//         value: "Remus Lupin"
-//       }
-//     ],
-//     correctAnswer: 0
-//   },
-//   {
-//     name: "Question 4",
-//     question: "What floor was the Room of Requirement located on?",
-//     answers: [
-//       {
-//         value: "Seventh"
-//       },
-//       {
-//         value: "Fourth"
-//       },
-//       {
-//         value: "Third"
-//       },
-//       {
-//         value: "First"
-//       }
-//     ],
-//     correctAnswer: 0
-//   },
-//   {
-//     name: "Question 5",
-//     question:
-//       "Hermione accidentally turned herself into a cat in Chamber of Secrets - but who did she intend to transform into?",
-//     answers: [
-//       {
-//         value: "Daphne Greengrass"
-//       },
-//       {
-//         value: "Millicent Bulstrode"
-//       },
-//       {
-//         value: "Pansy Parkinson"
-//       },
-//       {
-//         value: "Tracey Davis"
-//       }
-//     ],
-//     correctAnswer: 1
-//   },
-//   {
-//     name: "Question 6",
-//     question:
-//       "How many hours of good luck were contained in the bottle of Felix Felicis Professor Slughorn offered as a prize?",
-//     answers: [
-//       {
-//         value: "48 hours"
-//       },
-//       {
-//         value: "24 hours"
-//       },
-//       {
-//         value: "12 hours"
-//       },
-//       {
-//         value: "6 hours"
-//       }
-//     ],
-//     correctAnswer: 2
-//   },
-//   {
-//     name: "Question 7",
-//     question:
-//       "In the Triwizard Tournament's third task, which magical creature asked Harry a riddle?",
-//     answers: [
-//       {
-//         value: "Pixie"
-//       },
-//       {
-//         value: "Centaur"
-//       },
-//       {
-//         value: "Giant"
-//       },
-//       {
-//         value: "Sphinx"
-//       }
-//     ],
-//     correctAnswer: 3
-//   },
-//   {
-//     name: "Question 8",
-//     question: "What does S.P.E.W stand for?",
-//     answers: [
-//       {
-//         value: "Society for the Protection of Elfish Ways"
-//       },
-//       {
-//         value: "Society for the Power of Elfish Well-being"
-//       },
-//       {
-//         value: "Society for the Promotion of Elfish Welfare"
-//       },
-//       {
-//         value: "Society for the Protection of Elves and Wizards"
-//       }
-//     ],
-//     correctAnswer: 2
-//   },
-//   {
-//     name: "Question 9",
-//     question: "What time does the Hogwarts Express depart?",
-//     answers: [
-//       {
-//         value: "11:30am"
-//       },
-//       {
-//         value: "11am"
-//       },
-//       {
-//         value: "12pm"
-//       },
-//       {
-//         value: "10am"
-//       }
-//     ],
-//     correctAnswer: 1
-//   },
-//   {
-//     name: "Question 10",
-//     question:
-//       "What animal does Draco Malfoy get turned into in Goblet of Fire?",
-//     answers: [
-//       {
-//         value: "Guinea Pig"
-//       },
-//       {
-//         value: "Rat"
-//       },
-//       {
-//         value: "Snake"
-//       },
-//       {
-//         value: "Ferret"
-//       }
-//     ],
-//     correctAnswer: 3
-//   }
-// ];
-
 $(function() {
   const quizData = {
     quiz: [
       {
         name: "Question 1",
         question:
-          "In Harry's first lesson with Snape, what is the first potion the class learns to make?",
+          "What charm did Professor McGonagall use to bring the statues and suits of armour to life in Deathy Hallows",
         answers: [
           {
-            value: "A potion to cure boils"
+            value: "Petrificus Totalis"
           },
           {
-            value: "Confusing Concoction"
+            value: "Piertotum Locomotor"
           },
           {
-            value: "Polyjuice Potion"
+            value: "Priori Incantato"
           },
           {
-            value: "An antidote for common poisons"
+            value: "Homenum Revelio"
           }
         ],
-        correctAnswer: 0
+        correctAnswer: 1
       },
       {
         name: "Question 2",
-        question:
-          "What would you get if you added powdered root of asphodel to an infusion of wormwood?",
+        question: "What does the spell Tarantallegra do?",
         answers: [
           {
-            value: "Pepperup Potion"
+            value: "Shoots spiders from the end of the wand"
           },
           {
-            value: "Wolfsbane Potion"
+            value: "Causes the victim to be covered in pasta"
           },
           {
-            value: "Draught of Living Death"
+            value: "Makes the victim's legs dance uncontrollably"
           },
           {
-            value: "Draught of Peace"
+            value: "Makes the victim break into song"
           }
         ],
         correctAnswer: 2
       },
       {
         name: "Question 3",
-        question:
-          "What is the incantation of the spell that can expel a boggart?",
+        question: "Who tried to use the 'spell' Peskipiksi Pesternomi?",
         answers: [
           {
-            value: "Waddiwasi"
+            value: "Gilderoy Lockhart"
           },
           {
-            value: "Riddikulus"
+            value: "Bellatrix Lestrange"
           },
           {
-            value: "Dissendium"
+            value: "Severus Snape"
           },
           {
-            value: "Morsmordre"
+            value: "Remus Lupin"
           }
         ],
-        correctAnswer: 1
+        correctAnswer: 0
       },
       {
         name: "Question 4",
-        question: "What does Neville Longbottom use to kill Nagini?",
+        question: "What floor was the Room of Requirement located on?",
         answers: [
           {
-            value: "A knife"
+            value: "Seventh"
           },
           {
-            value: "Basilisk Fang"
+            value: "Fourth"
           },
           {
-            value: "His wand"
+            value: "Third"
           },
           {
-            value: "The sword of Gryffindor"
+            value: "First"
           }
         ],
-        correctAnswer: 3
+        correctAnswer: 0
       },
       {
         name: "Question 5",
-        question: "What was the first name of Sirius Black's mother?",
+        question:
+          "Hermione accidentally turned herself into a cat in Chamber of Secrets - but who did she intend to transform into?",
         answers: [
           {
-            value: "Willhemina"
+            value: "Daphne Greengrass"
           },
           {
-            value: "Walburga"
+            value: "Millicent Bulstrode"
           },
           {
-            value: "Winnifred"
+            value: "Pansy Parkinson"
           },
           {
-            value: "Warmina"
+            value: "Tracey Davis"
           }
         ],
         correctAnswer: 1
@@ -300,95 +101,97 @@ $(function() {
       {
         name: "Question 6",
         question:
-          "What spell do Death Eaters use to conjure up the Dark Mark in the sky?",
+          "How many hours of good luck were contained in the bottle of Felix Felicis Professor Slughorn offered as a prize?",
         answers: [
           {
-            value: "Morsmordre"
+            value: "48 hours"
           },
           {
-            value: "Piertotum Locomotor"
+            value: "24 hours"
           },
           {
-            value: "Stupefy"
+            value: "12 hours"
           },
           {
-            value: "Avada Kedavra"
-          }
-        ],
-        correctAnswer: 0
-      },
-      {
-        name: "Question 7",
-        question: "What is Albus Dumblesdore's full name?",
-        answers: [
-          {
-            value: "Albus Peter Weatherby Barnabus Dumbledore"
-          },
-          {
-            value: "Albus Polonius Wilfred Bertram Dumbledore"
-          },
-          {
-            value: "Albus Percival Wulfric Brian Dumbledore"
-          },
-          {
-            value: "Albus Pericles Wolfgang Bernard Dumbledore"
+            value: "6 hours"
           }
         ],
         correctAnswer: 2
       },
       {
-        name: "Question 8",
-        question: "What form does Hermione's Patronus take?",
+        name: "Question 7",
+        question:
+          "In the Triwizard Tournament's third task, which magical creature asked Harry a riddle?",
         answers: [
           {
-            value: "Dove"
+            value: "Pixie"
           },
           {
-            value: "Jack Russell Terrier"
+            value: "Centaur"
           },
           {
-            value: "Otter"
+            value: "Giant"
           },
           {
-            value: "Hare"
+            value: "Sphinx"
+          }
+        ],
+        correctAnswer: 3
+      },
+      {
+        name: "Question 8",
+        question: "What does S.P.E.W stand for?",
+        answers: [
+          {
+            value: "Society for the Protection of Elfish Ways"
+          },
+          {
+            value: "Society for the Power of Elfish Well-being"
+          },
+          {
+            value: "Society for the Promotion of Elfish Welfare"
+          },
+          {
+            value: "Society for the Protection of Elves and Wizards"
           }
         ],
         correctAnswer: 2
       },
       {
         name: "Question 9",
-        question: "What materials was Harry's wand made out of?",
+        question: "What time does the Hogwarts Express depart?",
         answers: [
           {
-            value: "Hawthorn and unicorn hair"
+            value: "11:30am"
           },
           {
-            value: "Holly and phoenix feather"
+            value: "11am"
           },
           {
-            value: "Vine and dragon heartstring"
+            value: "12pm"
           },
           {
-            value: "Willow and unicorn hair"
+            value: "10am"
           }
         ],
         correctAnswer: 1
       },
       {
         name: "Question 10",
-        question: "Which family did Winky the house elf serve?",
+        question:
+          "What animal does Draco Malfoy get turned into in Goblet of Fire?",
         answers: [
           {
-            value: "Malfoys"
+            value: "Guinea Pig"
           },
           {
-            value: "Diggorys"
+            value: "Rat"
           },
           {
-            value: "Potters"
+            value: "Snake"
           },
           {
-            value: "Crouches"
+            value: "Ferret"
           }
         ],
         correctAnswer: 3
@@ -396,6 +199,207 @@ $(function() {
     ],
     score: 0
   };
+
+  // $(function() {
+  //   const quizData = {
+  //     quiz: [
+  //       {
+  //         name: "Question 1",
+  //         question:
+  //           "In Harry's first lesson with Snape, what is the first potion the class learns to make?",
+  //         answers: [
+  //           {
+  //             value: "A potion to cure boils"
+  //           },
+  //           {
+  //             value: "Confusing Concoction"
+  //           },
+  //           {
+  //             value: "Polyjuice Potion"
+  //           },
+  //           {
+  //             value: "An antidote for common poisons"
+  //           }
+  //         ],
+  //         correctAnswer: 0
+  //       },
+  //       {
+  //         name: "Question 2",
+  //         question:
+  //           "What would you get if you added powdered root of asphodel to an infusion of wormwood?",
+  //         answers: [
+  //           {
+  //             value: "Pepperup Potion"
+  //           },
+  //           {
+  //             value: "Wolfsbane Potion"
+  //           },
+  //           {
+  //             value: "Draught of Living Death"
+  //           },
+  //           {
+  //             value: "Draught of Peace"
+  //           }
+  //         ],
+  //         correctAnswer: 2
+  //       },
+  //       {
+  //         name: "Question 3",
+  //         question:
+  //           "What is the incantation of the spell that can expel a boggart?",
+  //         answers: [
+  //           {
+  //             value: "Waddiwasi"
+  //           },
+  //           {
+  //             value: "Riddikulus"
+  //           },
+  //           {
+  //             value: "Dissendium"
+  //           },
+  //           {
+  //             value: "Morsmordre"
+  //           }
+  //         ],
+  //         correctAnswer: 1
+  //       },
+  //       {
+  //         name: "Question 4",
+  //         question: "What does Neville Longbottom use to kill Nagini?",
+  //         answers: [
+  //           {
+  //             value: "A knife"
+  //           },
+  //           {
+  //             value: "Basilisk Fang"
+  //           },
+  //           {
+  //             value: "His wand"
+  //           },
+  //           {
+  //             value: "The sword of Gryffindor"
+  //           }
+  //         ],
+  //         correctAnswer: 3
+  //       },
+  //       {
+  //         name: "Question 5",
+  //         question: "What was the first name of Sirius Black's mother?",
+  //         answers: [
+  //           {
+  //             value: "Willhemina"
+  //           },
+  //           {
+  //             value: "Walburga"
+  //           },
+  //           {
+  //             value: "Winnifred"
+  //           },
+  //           {
+  //             value: "Warmina"
+  //           }
+  //         ],
+  //         correctAnswer: 1
+  //       },
+  //       {
+  //         name: "Question 6",
+  //         question:
+  //           "What spell do Death Eaters use to conjure up the Dark Mark in the sky?",
+  //         answers: [
+  //           {
+  //             value: "Morsmordre"
+  //           },
+  //           {
+  //             value: "Piertotum Locomotor"
+  //           },
+  //           {
+  //             value: "Stupefy"
+  //           },
+  //           {
+  //             value: "Avada Kedavra"
+  //           }
+  //         ],
+  //         correctAnswer: 0
+  //       },
+  //       {
+  //         name: "Question 7",
+  //         question: "What is Albus Dumblesdore's full name?",
+  //         answers: [
+  //           {
+  //             value: "Albus Peter Weatherby Barnabus Dumbledore"
+  //           },
+  //           {
+  //             value: "Albus Polonius Wilfred Bertram Dumbledore"
+  //           },
+  //           {
+  //             value: "Albus Percival Wulfric Brian Dumbledore"
+  //           },
+  //           {
+  //             value: "Albus Pericles Wolfgang Bernard Dumbledore"
+  //           }
+  //         ],
+  //         correctAnswer: 2
+  //       },
+  //       {
+  //         name: "Question 8",
+  //         question: "What form does Hermione's Patronus take?",
+  //         answers: [
+  //           {
+  //             value: "Dove"
+  //           },
+  //           {
+  //             value: "Jack Russell Terrier"
+  //           },
+  //           {
+  //             value: "Otter"
+  //           },
+  //           {
+  //             value: "Hare"
+  //           }
+  //         ],
+  //         correctAnswer: 2
+  //       },
+  //       {
+  //         name: "Question 9",
+  //         question: "What materials was Harry's wand made out of?",
+  //         answers: [
+  //           {
+  //             value: "Hawthorn and unicorn hair"
+  //           },
+  //           {
+  //             value: "Holly and phoenix feather"
+  //           },
+  //           {
+  //             value: "Vine and dragon heartstring"
+  //           },
+  //           {
+  //             value: "Willow and unicorn hair"
+  //           }
+  //         ],
+  //         correctAnswer: 1
+  //       },
+  //       {
+  //         name: "Question 10",
+  //         question: "Which family did Winky the house elf serve?",
+  //         answers: [
+  //           {
+  //             value: "Malfoys"
+  //           },
+  //           {
+  //             value: "Diggorys"
+  //           },
+  //           {
+  //             value: "Potters"
+  //           },
+  //           {
+  //             value: "Crouches"
+  //           }
+  //         ],
+  //         correctAnswer: 3
+  //       }
+  //     ],
+  //     score: 0
+  //   };
 
   // Cached Selectors
   const $welcome = $("#welcome");
@@ -431,9 +435,11 @@ $(function() {
         .attr("id");
       const correctAnswer = quizData.quiz[fieldSetID].correctAnswer;
       if (userChoiceNumber === correctAnswer) {
+        alert("Correct!");
         quizData.score++;
         showScore();
       } else {
+        alert("Wrong");
         quizData.score;
         showScore();
       }
@@ -492,7 +498,6 @@ $(function() {
     showQuestion(0);
     formSubmit();
     showScore();
-    labelClick();
   };
 
   init();
