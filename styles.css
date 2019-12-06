@@ -224,7 +224,6 @@ html {
 
 /* My styles start here */
 
-/* Colors: #f6ec34, #ef3e4b, #b1e2f4, #fef6ab, #c3996c, #ce872a, #965a24 */
 * {
   margin: 0;
   padding: 0;
@@ -236,6 +235,8 @@ html {
 
 body {
   background: linear-gradient(to top, #f09819, #edde5d);
+  background-repeat: no-repeat;
+  height: 100vh;
   font-family: "Quicksand", sans-serif;
   font-size: 1.6rem;
 }
