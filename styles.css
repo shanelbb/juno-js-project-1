@@ -416,6 +416,11 @@ button:hover {
   background: #0029ff;
 }
 
+.controls {
+  display: flex;
+  justify-content: space-around;
+}
+
 .nextButton {
   width: 40%;
 }

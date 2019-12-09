@@ -431,7 +431,6 @@ $(function() {
         .prev()
         .children("input[type='radio']:checked")
         .val();
-      console.log("User Choice: ", userChoice);
       const userChoiceNumber = parseInt(userChoice);
       const fieldSetID = $(this)
         .prev()
