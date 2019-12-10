@@ -198,7 +198,7 @@ $(function() {
       {
         name: "Question11",
         question:
-          "What charm did Professor McGonagall use to bring the statues and suits of armour to life in Deathy Hallows",
+          "What charm did Professor McGonagall use to bring the statues and suits of armour to life in Deathly Hallows",
         answers: [
           {
             value: "Petrificus Totalis"
@@ -402,11 +402,12 @@ $(function() {
   const $scoreBoard = $(".score-board");
   const $restart = $(".restart");
 
+  // Welcome page
   const startPage = function() {
     $game.addClass("hide");
     $scoreBoard.addClass("hide");
     $restart.addClass("hide");
-
+    // goes to first question when start button is clicked
     $start.on("click", () => {
       $game.removeClass("hide");
       $welcome.addClass("hide");
@@ -420,10 +421,12 @@ $(function() {
         .prev()
         .children("input[type='radio']:checked")
         .val();
+      console.log(userChoice);
       const userChoiceNumber = parseInt(userChoice);
       const fieldSetID = $(this)
         .prev()
         .attr("id");
+
       const correctAnswer = quizData.quiz[fieldSetID].correctAnswer;
       if (userChoiceNumber === correctAnswer) {
         alert("You are CORRECT!");
