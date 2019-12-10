@@ -429,11 +429,11 @@ $(function() {
 
       const correctAnswer = quizData.quiz[fieldSetID].correctAnswer;
       if (userChoiceNumber === correctAnswer) {
-        alert("You are CORRECT!");
+        // alert("You are CORRECT!");
         quizData.score++;
         showScore();
       } else {
-        alert(`WRONG. The correct answer is option ${correctAnswer + 1}`);
+        // alert(`WRONG. The correct answer is option ${correctAnswer + 1}`);
         quizData.score;
         showScore();
       }
@@ -460,7 +460,62 @@ $(function() {
     }
   };
   const showScore = function(score) {
-    $scoreBoard.html(`<h4 class="scoreTotal">${quizData.score} / 20</h4>`);
+    if (quizData.score >= 17) {
+      $scoreBoard.html(
+        `<div class="finalScreen">
+        <img
+        class="finalImg"
+        src="./assets/deathly-hallows.png"
+        alt="Deathly Hallows illustration"/>
+        <h4 class="scoreTotal">You're a Harry Potter expert!</h4> 
+        <h4>You scored ${quizData.score} / 20</h4>
+        </div>`
+      );
+    } else if (quizData.score >= 14 && quizData.score < 17) {
+      $scoreBoard.html(
+        `<div class="finalScreen">
+        <img
+        class="finalImg"
+        src="./assets/lightning-bolt.png"
+        alt="Lightning bolt illustration"/>
+        <h4 class="scoreTotal">Well done! You know a lot about Harry Potter.</h4> 
+        <h4>You scored ${quizData.score} / 20</h4>
+        </div>`
+      );
+    } else if (quizData.score >= 10 && quizData.score < 14) {
+      $scoreBoard.html(
+        `<div class="finalScreen">
+        <img
+        class="finalImg"
+        src="./assets/glasses.png"
+        alt="Harry Potter glasses illustration"/>
+        <h4 class="scoreTotal">Not bad but you could use a Harry Potter refresher.</h4> 
+        <h4>You scored ${quizData.score} / 20</h4>
+        </div>`
+      );
+    } else if (quizData.score >= 5 && quizData.score < 10) {
+      $scoreBoard.html(
+        `<div class="finalScreen">
+        <img
+        class="finalImg"
+        src="./assets/letter.png"
+        alt="Letter illustration"/>
+    <h4 class="scoreTotal">Hmmm, maybe you should re-read the books.</h4> 
+        <h4>You scored ${quizData.score} / 20</h4>
+        </div>`
+      );
+    } else {
+      $scoreBoard.html(
+        `<div class="finalScreen">
+        <img
+        class="finalImg"
+        src="./assets/broom.png"
+        alt="Wizard broom illustration"/>
+    <h4 class="scoreTotal">Have you even read the books!</h4> 
+        <h4>You scored ${quizData.score} / 20</h4>
+        </div>`
+      );
+    }
   };
 
   const showQuestion = function(i) {
@@ -494,12 +549,6 @@ $(function() {
     const htmlToAppend = `
     <div class="finalScreen">
     <h4 class="finite">Finite Incantatem!</h4>
-    <img
-        class="finalImg"
-        src="./assets/deathly-hallows.png"
-        alt="Deathly Hallows illustration"
-    />
-    <h4 class="scoreTotal">Your final score is:</h4>
   </div>
   `;
     $scoreBoard.removeClass("hide");
