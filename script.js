@@ -429,11 +429,11 @@ $(function() {
 
       const correctAnswer = quizData.quiz[fieldSetID].correctAnswer;
       if (userChoiceNumber === correctAnswer) {
-        // alert("You are CORRECT!");
+        alert("You are CORRECT!");
         quizData.score++;
         showScore();
       } else {
-        // alert(`WRONG. The correct answer is option ${correctAnswer + 1}`);
+        alert(`WRONG. The correct answer is option ${correctAnswer + 1}`);
         quizData.score;
         showScore();
       }
