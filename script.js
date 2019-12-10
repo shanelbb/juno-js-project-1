@@ -108,7 +108,7 @@ $(function() {
             value: "Morsmordre"
           },
           {
-            value: "Piertotum Locomotor"
+            value: "Sectumsempra"
           },
           {
             value: "Stupefy"
@@ -461,17 +461,28 @@ $(function() {
   const showScore = function(score) {
     $scoreBoard.html(`<h4 class="scoreTotal">${quizData.score} / 20</h4>`);
   };
+
   const showQuestion = function(i) {
     const htmlToAppend = `
       <fieldset id=${i}>
-        <legend><h4>${quizData.quiz[i].question}</h4></legend>
-        <input value="0" type="radio" name=${quizData.quiz[i].name} id="answer1"/>
+        <legend>
+        <h5>${i + 1} of 20</h5>
+        <h4>${quizData.quiz[i].question}</h4></legend>
+        <input value="0" type="radio" name=${
+          quizData.quiz[i].name
+        } id="answer1"/>
         <label for="answer1">${quizData.quiz[i].answers[0].value}</label>
-        <input  value="1" type="radio" name=${quizData.quiz[i].name} id="answer2"/>
+        <input  value="1" type="radio" name=${
+          quizData.quiz[i].name
+        } id="answer2"/>
         <label for="answer2">${quizData.quiz[i].answers[1].value}</label>
-        <input  value="2" type="radio" name=${quizData.quiz[i].name} id="answer3"/>
+        <input  value="2" type="radio" name=${
+          quizData.quiz[i].name
+        } id="answer3"/>
         <label for="answer3">${quizData.quiz[i].answers[2].value}</label>
-        <input  value="3" type="radio" name=${quizData.quiz[i].name} id="answer4"/>
+        <input  value="3" type="radio" name=${
+          quizData.quiz[i].name
+        } id="answer4"/>
         <label for="answer4">${quizData.quiz[i].answers[3].value}</label>
       </fieldset>
       <button id="next">next</button>
