@@ -1,205 +1,3 @@
-// $(function() {
-//   const quizData = {
-//     quiz: [
-//       {
-//         name: "Question1",
-//         question:
-//           "What charm did Professor McGonagall use to bring the statues and suits of armour to life in Deathy Hallows",
-//         answers: [
-//           {
-//             value: "Petrificus Totalis"
-//           },
-//           {
-//             value: "Piertotum Locomotor"
-//           },
-//           {
-//             value: "Priori Incantato"
-//           },
-//           {
-//             value: "Homenum Revelio"
-//           }
-//         ],
-//         correctAnswer: 1
-//       },
-//       {
-//         name: "Question2",
-//         question: "What does the spell Tarantallegra do?",
-//         answers: [
-//           {
-//             value: "Shoots spiders from the end of the wand"
-//           },
-//           {
-//             value: "Causes the victim to be covered in pasta"
-//           },
-//           {
-//             value: "Makes the victim's legs dance uncontrollably"
-//           },
-//           {
-//             value: "Makes the victim break into song"
-//           }
-//         ],
-//         correctAnswer: 2
-//       },
-//       {
-//         name: "Question3",
-//         question: "Who tried to use the 'spell' Peskipiksi Pesternomi?",
-//         answers: [
-//           {
-//             value: "Gilderoy Lockhart"
-//           },
-//           {
-//             value: "Bellatrix Lestrange"
-//           },
-//           {
-//             value: "Severus Snape"
-//           },
-//           {
-//             value: "Remus Lupin"
-//           }
-//         ],
-//         correctAnswer: 0
-//       },
-//       {
-//         name: "Question4",
-//         question: "What floor was the Room of Requirement located on?",
-//         answers: [
-//           {
-//             value: "Seventh"
-//           },
-//           {
-//             value: "Fourth"
-//           },
-//           {
-//             value: "Third"
-//           },
-//           {
-//             value: "First"
-//           }
-//         ],
-//         correctAnswer: 0
-//       },
-//       {
-//         name: "Question5",
-//         question:
-//           "Hermione accidentally turned herself into a cat in Chamber of Secrets - but who did she intend to transform into?",
-//         answers: [
-//           {
-//             value: "Daphne Greengrass"
-//           },
-//           {
-//             value: "Millicent Bulstrode"
-//           },
-//           {
-//             value: "Pansy Parkinson"
-//           },
-//           {
-//             value: "Tracey Davis"
-//           }
-//         ],
-//         correctAnswer: 1
-//       },
-//       {
-//         name: "Question6",
-//         question:
-//           "How many hours of good luck were contained in the bottle of Felix Felicis Professor Slughorn offered as a prize?",
-//         answers: [
-//           {
-//             value: "48 hours"
-//           },
-//           {
-//             value: "24 hours"
-//           },
-//           {
-//             value: "12 hours"
-//           },
-//           {
-//             value: "6 hours"
-//           }
-//         ],
-//         correctAnswer: 2
-//       },
-//       {
-//         name: "Question7",
-//         question:
-//           "In the Triwizard Tournament's third task, which magical creature asked Harry a riddle?",
-//         answers: [
-//           {
-//             value: "Pixie"
-//           },
-//           {
-//             value: "Centaur"
-//           },
-//           {
-//             value: "Giant"
-//           },
-//           {
-//             value: "Sphinx"
-//           }
-//         ],
-//         correctAnswer: 3
-//       },
-//       {
-//         name: "Question8",
-//         question: "What does S.P.E.W stand for?",
-//         answers: [
-//           {
-//             value: "Society for the Protection of Elfish Ways"
-//           },
-//           {
-//             value: "Society for the Power of Elfish Well-being"
-//           },
-//           {
-//             value: "Society for the Promotion of Elfish Welfare"
-//           },
-//           {
-//             value: "Society for the Protection of Elves and Wizards"
-//           }
-//         ],
-//         correctAnswer: 2
-//       },
-//       {
-//         name: "Question9",
-//         question: "What time does the Hogwarts Express depart?",
-//         answers: [
-//           {
-//             value: "11:30am"
-//           },
-//           {
-//             value: "11am"
-//           },
-//           {
-//             value: "12pm"
-//           },
-//           {
-//             value: "10am"
-//           }
-//         ],
-//         correctAnswer: 1
-//       },
-//       {
-//         name: "Question10",
-//         question:
-//           "What animal does Draco Malfoy get turned into in Goblet of Fire?",
-//         answers: [
-//           {
-//             value: "Guinea Pig"
-//           },
-//           {
-//             value: "Rat"
-//           },
-//           {
-//             value: "Snake"
-//           },
-//           {
-//             value: "Ferret"
-//           }
-//         ],
-//         correctAnswer: 3
-//       }
-//     ],
-//     score: 0
-//   };
-
 $(function() {
   const quizData = {
     quiz: [
@@ -396,6 +194,201 @@ $(function() {
           }
         ],
         correctAnswer: 3
+      },
+      {
+        name: "Question11",
+        question:
+          "What charm did Professor McGonagall use to bring the statues and suits of armour to life in Deathy Hallows",
+        answers: [
+          {
+            value: "Petrificus Totalis"
+          },
+          {
+            value: "Piertotum Locomotor"
+          },
+          {
+            value: "Priori Incantato"
+          },
+          {
+            value: "Homenum Revelio"
+          }
+        ],
+        correctAnswer: 1
+      },
+      {
+        name: "Question12",
+        question: "What does the spell Tarantallegra do?",
+        answers: [
+          {
+            value: "Shoots spiders from the end of the wand"
+          },
+          {
+            value: "Causes the victim to be covered in pasta"
+          },
+          {
+            value: "Makes the victim's legs dance uncontrollably"
+          },
+          {
+            value: "Makes the victim break into song"
+          }
+        ],
+        correctAnswer: 2
+      },
+      {
+        name: "Question13",
+        question: "Who tried to use the 'spell' Peskipiksi Pesternomi?",
+        answers: [
+          {
+            value: "Gilderoy Lockhart"
+          },
+          {
+            value: "Bellatrix Lestrange"
+          },
+          {
+            value: "Severus Snape"
+          },
+          {
+            value: "Remus Lupin"
+          }
+        ],
+        correctAnswer: 0
+      },
+      {
+        name: "Question14",
+        question: "What floor was the Room of Requirement located on?",
+        answers: [
+          {
+            value: "Seventh"
+          },
+          {
+            value: "Fourth"
+          },
+          {
+            value: "Third"
+          },
+          {
+            value: "First"
+          }
+        ],
+        correctAnswer: 0
+      },
+      {
+        name: "Question15",
+        question:
+          "Hermione accidentally turned herself into a cat in Chamber of Secrets - but who did she intend to transform into?",
+        answers: [
+          {
+            value: "Daphne Greengrass"
+          },
+          {
+            value: "Millicent Bulstrode"
+          },
+          {
+            value: "Pansy Parkinson"
+          },
+          {
+            value: "Tracey Davis"
+          }
+        ],
+        correctAnswer: 1
+      },
+      {
+        name: "Question16",
+        question:
+          "How many hours of good luck were contained in the bottle of Felix Felicis Professor Slughorn offered as a prize?",
+        answers: [
+          {
+            value: "48 hours"
+          },
+          {
+            value: "24 hours"
+          },
+          {
+            value: "12 hours"
+          },
+          {
+            value: "6 hours"
+          }
+        ],
+        correctAnswer: 2
+      },
+      {
+        name: "Question17",
+        question:
+          "In the Triwizard Tournament's third task, which magical creature asked Harry a riddle?",
+        answers: [
+          {
+            value: "Pixie"
+          },
+          {
+            value: "Centaur"
+          },
+          {
+            value: "Giant"
+          },
+          {
+            value: "Sphinx"
+          }
+        ],
+        correctAnswer: 3
+      },
+      {
+        name: "Question18",
+        question: "What does S.P.E.W stand for?",
+        answers: [
+          {
+            value: "Society for the Protection of Elfish Ways"
+          },
+          {
+            value: "Society for the Power of Elfish Well-being"
+          },
+          {
+            value: "Society for the Promotion of Elfish Welfare"
+          },
+          {
+            value: "Society for the Protection of Elves and Wizards"
+          }
+        ],
+        correctAnswer: 2
+      },
+      {
+        name: "Question19",
+        question: "What time does the Hogwarts Express depart?",
+        answers: [
+          {
+            value: "11:30am"
+          },
+          {
+            value: "11am"
+          },
+          {
+            value: "12pm"
+          },
+          {
+            value: "10am"
+          }
+        ],
+        correctAnswer: 1
+      },
+      {
+        name: "Question20",
+        question:
+          "What animal does Draco Malfoy get turned into in Goblet of Fire?",
+        answers: [
+          {
+            value: "Guinea Pig"
+          },
+          {
+            value: "Rat"
+          },
+          {
+            value: "Snake"
+          },
+          {
+            value: "Ferret"
+          }
+        ],
+        correctAnswer: 3
       }
     ],
     score: 0
@@ -466,7 +459,7 @@ $(function() {
     }
   };
   const showScore = function(score) {
-    $scoreBoard.html(`<h4 class="scoreTotal">${quizData.score * 10} </h4>`);
+    $scoreBoard.html(`<h4 class="scoreTotal">${quizData.score} / 20</h4>`);
   };
   const showQuestion = function(i) {
     const htmlToAppend = `
