@@ -413,10 +413,6 @@ $(function() {
     });
   };
 
-  // let correctArray = quizData.quiz.map(function(question) {
-  //   return question.correct;
-  // });
-
   const formSubmit = function(i) {
     $("form").on("click", "button", function(e) {
       e.preventDefault();
@@ -430,9 +426,11 @@ $(function() {
         .attr("id");
       const correctAnswer = quizData.quiz[fieldSetID].correctAnswer;
       if (userChoiceNumber === correctAnswer) {
+        alert("You are CORRECT!");
         quizData.score++;
         showScore();
       } else {
+        alert(`WRONG. The correct answer is option ${correctAnswer + 1}`);
         quizData.score;
         showScore();
       }
