@@ -407,6 +407,12 @@ button:focus {
   background: #0029ff;
 }
 
+.swal-text {
+  text-align: center;
+  line-height: 25px;
+  font-size: 2rem;
+}
+
 #next:active {
   background: #0029ff;
 }
@@ -505,6 +511,9 @@ footer a:focus {
     padding: 10px 20px;
     font-size: 2rem;
   }
+  .swal-text {
+    font-size: 1.6rem;
+  }
 }
 
 @media (max-width: 400px) {
@@ -531,7 +540,7 @@ footer a:focus {
     line-height: 28px;
   }
   h5 {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
   .welcomeImg,
   .finalImg {

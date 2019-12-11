@@ -406,6 +406,8 @@ $(function() {
   // Welcome page
   const startPage = function() {
     $game.addClass("hide");
+    // scoreboard and start over button hidden until final
+    // results page.
     $scoreBoard.addClass("hide");
     $restart.addClass("hide");
     // goes to first question when start button is clicked
@@ -443,16 +445,16 @@ $(function() {
           title: "CORRECT!",
           text: "",
           icon: "success",
-          button: "Accio Next!"
+          button: "Next"
         });
         quizData.score++;
         showScore();
       } else {
         swal({
           title: "WRONG",
-          text: `The correct answer is ${correctValue}`,
+          text: `The correct answer is : ${correctValue}.`,
           icon: "error",
-          button: "Accio Next!"
+          button: "Next"
         });
         quizData.score;
         showScore();
@@ -466,6 +468,7 @@ $(function() {
     });
   };
 
+  // Allows labels to be clicked instead of hidden inputs
   const labelClicked = function() {
     $("form").on("click", "label", function() {
       let inputID = $(this).attr("for");
@@ -473,6 +476,8 @@ $(function() {
     });
   };
 
+  // Moves to the next question until the last
+  //question after which it moves to final screen
   const showNextQuestion = index => {
     if (index === quizData.quiz.length - 1) {
       showFinalScreen();
@@ -480,8 +485,11 @@ $(function() {
       showQuestion(index + 1);
     }
   };
+
+  // Shows the score with custom message & image
+  // for different score tiers
   const showScore = function(score) {
-    if (quizData.score >= 17) {
+    if (quizData.score >= 18) {
       $scoreBoard.html(
         `<div class="finalScreen">
         <img
@@ -492,7 +500,7 @@ $(function() {
         <h4>You scored ${quizData.score} / 20</h4>
         </div>`
       );
-    } else if (quizData.score >= 14 && quizData.score < 17) {
+    } else if (quizData.score >= 14 && quizData.score < 18) {
       $scoreBoard.html(
         `<div class="finalScreen">
         <img
@@ -539,6 +547,8 @@ $(function() {
     }
   };
 
+  // Function to dynamically create the HTML with
+  // quiz data
   const showQuestion = function(i) {
     const htmlToAppend = `
       <fieldset id=${i}>
@@ -566,17 +576,22 @@ $(function() {
     `;
     $content.append(htmlToAppend);
   };
+
+  // Function to create final screen HTML and
+  // un-hide scoreboard and start again button
   const showFinalScreen = () => {
     const htmlToAppend = `
     <div class="finalScreen">
     <h4 class="finite">Finite Incantatem!</h4>
   </div>
   `;
-    $scoreBoard.removeClass("hide");
     $content.html(htmlToAppend);
+    $scoreBoard.removeClass("hide");
     $restart.removeClass("hide");
   };
 
+  // function to reload page to start of quiz
+  // when start over button is clicked
   const startOver = function() {
     $restart.on("click", function() {
       location.reload();
