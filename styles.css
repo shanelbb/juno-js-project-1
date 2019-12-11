@@ -381,7 +381,8 @@ label.wrong {
   color: black;
 }
 
-button {
+button,
+.swal-button {
   font-family: "Quicksand", sans-serif;
   text-transform: uppercase;
   text-decoration: none;
@@ -394,6 +395,11 @@ button {
   color: #edde5d;
   background: linear-gradient(to top, #091b6a, #0029ff);
   font-size: 2rem;
+}
+
+.swal-button {
+  outline: none;
+  font-weight: 400;
 }
 
 button:hover,
@@ -494,7 +500,8 @@ footer a:focus {
     padding: 10px 50px;
     margin: 10px;
   }
-  button {
+  button,
+  .swal-button {
     padding: 10px 20px;
     font-size: 2rem;
   }
@@ -530,13 +537,8 @@ footer a:focus {
   .finalImg {
     height: 200px;
   }
-  label {
-    font-size: 1.5rem;
-    padding: 10px 50px;
-    margin: 10px;
-  }
-  button {
-    padding: 10px 20px;
+  button,
+  .swal-button {
     font-size: 1.5rem;
   }
 }

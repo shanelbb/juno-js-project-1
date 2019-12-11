@@ -1,4 +1,5 @@
 $(function() {
+  // quiz data object
   const quizData = {
     quiz: [
       {
@@ -414,34 +415,49 @@ $(function() {
     });
   };
 
+  // Function to submit form when next button is pressed
   const formSubmit = function(i) {
     $("form").on("click", "button", function(e) {
       e.preventDefault();
+      // defines user answer
       const userChoice = $(this)
         .prev()
         .children("input[type='radio']:checked")
         .val();
+      //turns user answer into a number
       const userChoiceNumber = parseInt(userChoice);
       const fieldSetID = $(this)
         .prev()
         .attr("id");
 
+      //determines which value is correct
       const correctAnswer = quizData.quiz[fieldSetID].correctAnswer;
 
+      // variable to parse out correct answer value so it can appear in wrong answer alert
       const correctValue =
         quizData.quiz[fieldSetID].answers[correctAnswer].value;
 
+      // statement to collect user answer, alerts user to result of their answer
       if (userChoiceNumber === correctAnswer) {
-        alert("You are CORRECT!");
+        swal({
+          title: "CORRECT!",
+          text: "",
+          icon: "success",
+          button: "Accio Next!"
+        });
         quizData.score++;
         showScore();
       } else {
-        // let correctIndex = quizData.quiz.correctAnswer;
-        // console.log(correctIndex);
-        alert(`WRONG. The correct answer is ${correctValue}`);
+        swal({
+          title: "WRONG",
+          text: `The correct answer is ${correctValue}`,
+          icon: "error",
+          button: "Accio Next!"
+        });
         quizData.score;
         showScore();
       }
+      //Moves quiz along to next question
       $(this).hide();
       $(this)
         .prev()
@@ -546,7 +562,7 @@ $(function() {
         } id="answer4"/>
         <label for="answer4">${quizData.quiz[i].answers[3].value}</label>
       </fieldset>
-      <button id="next">next</button>
+      <button id="next">submit</button>
     `;
     $content.append(htmlToAppend);
   };
