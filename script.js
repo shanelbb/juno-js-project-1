@@ -421,19 +421,24 @@ $(function() {
         .prev()
         .children("input[type='radio']:checked")
         .val();
-      console.log(userChoice);
       const userChoiceNumber = parseInt(userChoice);
       const fieldSetID = $(this)
         .prev()
         .attr("id");
 
       const correctAnswer = quizData.quiz[fieldSetID].correctAnswer;
+
+      const correctValue =
+        quizData.quiz[fieldSetID].answers[correctAnswer].value;
+
       if (userChoiceNumber === correctAnswer) {
         alert("You are CORRECT!");
         quizData.score++;
         showScore();
       } else {
-        alert(`WRONG. The correct answer is option ${correctAnswer + 1}`);
+        // let correctIndex = quizData.quiz.correctAnswer;
+        // console.log(correctIndex);
+        alert(`WRONG. The correct answer is ${correctValue}`);
         quizData.score;
         showScore();
       }
