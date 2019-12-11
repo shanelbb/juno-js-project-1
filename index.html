@@ -12,31 +12,36 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <!-- Header starts here -->
     <header>
       <img
-        class="headerImg"
-        src="./assets/cauldron.png"
-        alt="Bubbling cauldron illustration"
+        class="headerImg1"
+        src="./assets/quidditch.png"
+        alt="Quidditch
+      elements illustration"
       />
 
       <div class="headings">
         <h1>Harry Potter</h1>
 
         <h2>and the Impossible Quiz</h2>
-
-        <h3>Test your knowledge of the wizarding world!</h3>
       </div>
 
       <img
-        class="headerImg"
-        src="./assets/quidditch.png"
-        alt="Quidditch elements illustration"
+        class="headerImg2"
+        src="./assets/cauldron.png"
+        alt="Bubbling cauldron illustration"
       />
     </header>
+    <!-- Header ends here -->
 
+    <!-- Main starts here -->
     <main>
+      <!-- Wrapper starts here -->
       <section class="wrapper">
+        <!-- Quiz starts here -->
         <div class="quiz" id="quiz">
+          <!-- Welcome Screen Starts Here -->
           <div class="welcome" id="welcome">
             <h4>
               How well do you know the world of Harry Potter?
@@ -49,20 +54,29 @@
 
             <button class="start" id="start">Let's Find Out!</button>
           </div>
+          <!-- Welcome Screen ends here -->
+
           <div id="game">
             <form class="content" action="">
-              <!-- quiz goes here -->
+              <!-- quiz goes here. Dynamic js content. -->
             </form>
           </div>
           <!-- SHOW SCORE -->
-          <div class="score-board"></div>
+          <div class="score-board">
+            <!-- Dynamic js content -->
+          </div>
+          <!-- Start Over button -->
           <div class="restart">
             <button>Start Over</button>
           </div>
         </div>
+        <!-- Quiz ends here -->
       </section>
+      <!-- Wrapper ends here -->
     </main>
+    <!-- main ends here -->
 
+    <!-- Footer starts here -->
     <footer>
       <a
         href="https://www.vecteezy.com/free-vector/harry"
@@ -70,7 +84,10 @@
         rel="noopener"
         >Harry Potter Vectors by Vecteezy</a
       >
+      <h6>&#169 Shanel Beebe 2019</h6>
     </footer>
+    <!-- Footer Ends here -->
+
 
     <!-- Javascript Links -->
     <script
@@ -80,5 +97,6 @@
     ></script>
 
     <script src="script.js"></script>
+    <!-- Javascript links end -->
   </body>
 </html>

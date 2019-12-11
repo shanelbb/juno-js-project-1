@@ -242,7 +242,7 @@ body {
 header {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   background: linear-gradient(to bottom, #9e1b38, #f05350);
   padding: 40px;
@@ -257,6 +257,11 @@ header {
   align-items: center;
   flex-wrap: wrap;
   text-align: center;
+}
+
+.headerImg1,
+.headerImg2 {
+  height: 200px;
 }
 
 h1,
@@ -281,6 +286,19 @@ h2 {
 h3 {
   font-size: 2.5rem;
   margin: 50px;
+}
+
+h4 {
+  font-size: 3rem;
+  text-align: center;
+  padding: 30px;
+  line-height: 35px;
+}
+
+h5 {
+  font-size: 2rem;
+  text-align: center;
+  padding-top: 20px;
 }
 
 .wrapper {
@@ -310,24 +328,8 @@ h3 {
   align-items: center;
 }
 
-.question {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  width: 80%;
-}
-
-h4 {
-  font-size: 3rem;
-  text-align: center;
-  padding: 30px;
-  line-height: 35px;
-}
-
-h5 {
-  font-size: 2rem;
-  text-align: center;
-  padding-top: 20px;
+.welcomeImg {
+  height: 250px;
 }
 
 form {
@@ -335,6 +337,7 @@ form {
   flex-direction: column;
   align-items: center;
 }
+
 fieldset {
   display: flex;
   flex-direction: column;
@@ -363,7 +366,8 @@ label {
   text-align: center;
 }
 
-label:hover {
+label:hover,
+label:focus {
   background: #0029ff;
 }
 
@@ -375,32 +379,6 @@ label.correct {
 label.wrong {
   background: #f05350;
   color: black;
-}
-
-img {
-  height: 200px;
-}
-
-.welcomeImg {
-  height: 250px;
-}
-
-.finalScreen {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.finalImg {
-  height: 250px;
-}
-
-.scoreTotal {
-  padding-top: 0;
-}
-
-.finite {
-  padding-bottom: 0;
 }
 
 button {
@@ -418,12 +396,31 @@ button {
   font-size: 2rem;
 }
 
-button:hover {
+button:hover,
+button:focus {
   background: #0029ff;
 }
 
 #next:active {
   background: #0029ff;
+}
+
+.finalScreen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.finite {
+  padding-bottom: 0;
+}
+
+.finalImg {
+  height: 250px;
+}
+
+.scoreTotal {
+  padding-top: 0;
 }
 
 .hide {
@@ -432,23 +429,34 @@ button:hover {
 
 footer {
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
   padding: 20px;
 }
 
 footer a {
   color: black;
   text-decoration: none;
+  padding-bottom: 20px;
 }
 
-footer a:hover {
+footer a:hover,
+footer a:focus {
   color: darkred;
 }
 
 /* Media Queries */
 
 @media (max-width: 800px) {
-  .headerImg {
+  header {
+    flex-direction: column;
+  }
+  .headerImg2 {
+    padding-top: 20px;
+    height: 200px;
+  }
+  .headerImg1 {
     display: none;
   }
 }
@@ -457,20 +465,16 @@ footer a:hover {
   header {
     padding: 30px;
   }
-
   h1 {
     font-size: 5rem;
   }
-
   h2 {
     font-size: 3rem;
   }
-
   h3 {
     font-size: 2rem;
     margin: 30px;
   }
-
   h4 {
     font-size: 2.5rem;
     padding: 20px;
@@ -479,17 +483,17 @@ footer a:hover {
   h5 {
     font-size: 1.5rem;
   }
-
+  .wrapper {
+    padding: 40px 15px;
+  }
   .quiz {
     width: 100%;
   }
-
   label {
     font-size: 1.5rem;
     padding: 10px 50px;
     margin: 10px;
   }
-
   button {
     padding: 10px 20px;
     font-size: 2rem;
@@ -500,24 +504,24 @@ footer a:hover {
   header {
     padding: 25px;
   }
-
+  .headerImg2 {
+    padding-top: 10px;
+    height: 150px;
+  }
   h1 {
     font-size: 4rem;
   }
-
   h2 {
     font-size: 2.5rem;
   }
-
   h3 {
     font-size: 2rem;
     margin: 25px;
   }
-
   h4 {
     font-size: 2rem;
     padding: 20px;
-    line-height: 20px;
+    line-height: 28px;
   }
   h5 {
     font-size: 1rem;
@@ -526,13 +530,11 @@ footer a:hover {
   .finalImg {
     height: 200px;
   }
-
   label {
     font-size: 1.5rem;
     padding: 10px 50px;
     margin: 10px;
   }
-
   button {
     padding: 10px 20px;
     font-size: 1.5rem;
