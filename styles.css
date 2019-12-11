@@ -407,6 +407,9 @@ button:focus {
   background: #0029ff;
 }
 
+.swal-overlay {
+  background-color: rgba(0, 0, 0, 0.9);
+}
 .swal-text {
   text-align: center;
   line-height: 25px;
