@@ -555,7 +555,7 @@ $(function() {
         <legend>
         <h5>${i + 1} of 20</h5>
         <h4>${quizData.quiz[i].question}</h4></legend>
-        <input value="0" type="radio" name=${
+        <input value="0" type="radio" checked name=${
           quizData.quiz[i].name
         } id="answer1"/>
         <label for="answer1">${quizData.quiz[i].answers[0].value}</label>

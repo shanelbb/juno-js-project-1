@@ -351,7 +351,8 @@ input[type="radio"] {
 }
 
 input[type="radio"]:checked + label {
-  background: #0029ff;
+  background: linear-gradient(to top, #f09819, #edde5d);
+  color: #091b6a;
 }
 
 label {
@@ -368,7 +369,8 @@ label {
 
 label:hover,
 label:focus {
-  background: #0029ff;
+  background: linear-gradient(to top, #f09819, #edde5d);
+  color: #091b6a;
 }
 
 label.correct {
@@ -399,7 +401,8 @@ button,
 
 button:hover,
 button:focus {
-  background: #0029ff;
+  background: linear-gradient(to top, #f09819, #edde5d);
+  color: #091b6a;
 }
 
 /* Sweet Alerts Styling */
@@ -408,11 +411,14 @@ button:focus {
 }
 
 .swal-button:not([disabled]):hover {
-  background: #0029ff;
+  background: linear-gradient(to top, #f09819, #edde5d);
+  color: #091b6a;
 }
 
 .swal-button:focus {
   box-shadow: none;
+  background: #0029ff;
+  color: #edde5d;
 }
 
 .swal-overlay {
@@ -431,7 +437,8 @@ button:focus {
 }
 
 #next:active {
-  background: #0029ff;
+  background: linear-gradient(to top, #f09819, #edde5d);
+  color: #091b6a;
 }
 
 .finalScreen {
@@ -450,6 +457,14 @@ button:focus {
 
 .scoreTotal {
   padding-top: 0;
+}
+
+.restart {
+  display: flex;
+  flex-direction: column;
+}
+.twitter-share-button {
+  margin: 20px;
 }
 
 .hide {
