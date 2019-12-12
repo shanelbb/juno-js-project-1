@@ -463,9 +463,6 @@ button:focus {
   display: flex;
   flex-direction: column;
 }
-.twitter-share-button {
-  margin: 20px;
-}
 
 .hide {
   display: none;
